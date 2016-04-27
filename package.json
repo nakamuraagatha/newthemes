@@ -1,0 +1,23 @@
+{
+  "name": "nakamura",
+  "version": "1.0.1",
+  "description": "blogging theme for ghost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "author": "nakamur agatha",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^2.3.1"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}

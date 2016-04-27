@@ -1,0 +1,40 @@
+{{!< default}}
+
+<header class="blog-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    {{!-- <div class="vertical"><h1>{{@blog.description}}</h1></div> --}}
+</header>
+
+<div class="wrap">
+    <section class="blog-content">
+
+        {{#foreach posts}}
+
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <section class="post-meta">
+                    <img class="author-img" src="{{author.image}}" alt="Author image" nopin="nopin" />
+                    <span class="author-name">{{author}}</span>
+                    &bull;
+                    <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
+                    <span class="tags">{{tags prefix="• " separator=" "}}</span>
+                </section>
+            </header>
+            <section class="post-excerpt">
+                <p>{{excerpt words="55"}}&hellip;</p>
+            </section>
+            <footer class="more-links">
+                <a class="read-more button-save" href="{{url}}">Read More</a>
+                {{!> share/post}}
+            </footer>
+        </article>
+
+        {{/foreach}}
+
+        {{pagination}}
+
+    </section>
+
+    {{> sidebar}}
+
+</div>
