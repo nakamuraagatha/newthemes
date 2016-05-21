@@ -1,5 +1,6 @@
 // Bourbon - http://bourbon.io/
 @import "assets/vendor/font-awesome/scss/font-awesome";
+@import "assets/vendor/open-sans/scss/open-sans";
 @import "assets/vendor/bourbon/app/assets/stylesheets/bourbon";
 $rounded                     : 2px;
 $shadow                      : rgba(0, 0, 0, .5) 0 1px 5px;
@@ -17,7 +18,7 @@ $input-font                  : inherit;
 
 $font-weight-thin            : 200;
 $font-weight-normal          : 400;
-$font-weight-bold            : 900;
+$font-weight-bold            : 800;
 
 // Max widths
 $netbook                     : 1000px;

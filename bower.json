@@ -27,7 +27,10 @@
     "font-awesome": "^4.6.1"
   },
   "devDependencies": {
-    "compass-breakpoint": "breakpoint-sass#~2.6.1"
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "font-awesome": "^4.6.1",
+    "fastclick": "^1.0.6",
+    "open-sans": "^1.1.0"
   },
   "ignore": [
     "**/.*",

@@ -7,7 +7,7 @@ var gulp  = require('gulp'),
 
 gulp.task('sass', function () {
   return gulp.src('./assets/scss/bloggy.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./assets/css'));
 });
 
@@ -21,14 +21,25 @@ gulp.task('scripts', function(){
         .pipe(gulp.dest('assets/js'));
 });
 
+
 gulp.task('icons', function() {
     return gulp.src('assets/scss/assets/vendor/font-awesome/fonts/**.*')
         .pipe(gulp.dest('assets/fonts'));
 });
 
+gulp.task('opensansregular', function() {
+    return gulp.src('assets/scss/assets/vendor/open-sans/fonts/regular/**.*')
+        .pipe(gulp.dest('assets/fonts'));
+});
+
+gulp.task('opensansbold', function() {
+    return gulp.src('assets/scss/assets/vendor/open-sans/fonts/extrabold/**.*')
+        .pipe(gulp.dest('assets/fonts'));
+});
+
 
 // create a default task and just log a message
-gulp.task('default', ['sass', 'scripts', 'icons'], function() {
+gulp.task('default', ['sass', 'scripts', 'icons', 'opensansregular', 'opensansbold'], function() {
   //do stuff after 'mytask' is done.
 });
 

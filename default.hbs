@@ -3,13 +3,12 @@
   <head>
     <title>{{meta_title}}</title>
     {{> meta}}
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400,200" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/bloggy.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bloggy.css"}}" ghost="true" />
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
     <div id="fb-root"></div>
-    {{> widgets/subscribe-banner}}
+    {{!> widgets/subscribe-banner}}
     <header id="global-header" class="global-header navbar">
       {{navigation}}
     </header>
@@ -27,5 +26,7 @@
     {{!> share/scripts/twitter}}
     
     <script src="{{asset "js/script.js"}}"></script>
+	<script src="{{asset "js/jquery.js"}}"></script>
+	<script src="{{asset "js/apps.js"}}"></script>
   </body>
 </html>
